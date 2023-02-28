@@ -4,23 +4,27 @@ package circulo;
  * Pruebas de refactorización  con la clase Circulo
  * @author profesor
  */
-public class Circulo {
+public class Circulito {
 
     private int x;
     private int y;
     private double radio;
 
-    public Circulo() {
+    public Circulito() {
     }
 
-    public Circulo(int valorX, int valorY, double valorRadio) {
-        x = valorX;
-        y = valorY;
+    public Circulito(int valorX, int valorY, double valorRadio) {
+        x = extracted(valorX);
+        y = extracted(valorY);
         establecerRadio(valorRadio);
     }
 
     public void establecerX(int valorX) {
-        x=valorX;
+        x=extracted(valorX);
+    }
+
+    private int extracted(int valorX) {
+        return valorX;
     }
 
     public int obtenerX() {
@@ -28,7 +32,7 @@ public class Circulo {
     }
 
     public void establecerY(int valorY) {
-        y=valorY;
+        y=extracted(valorY);
     }
 
     public int obtenerY() {

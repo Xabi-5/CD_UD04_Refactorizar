@@ -8,7 +8,7 @@ import java.text.DecimalFormat;
  */
 public class Main {
     public static void main(String[] args) {
-        Circulo circulo = new Circulo(37,43,2.5);
+        Circulito circulo = new Circulito(37,43,2.5);
         String salida =
                 "La coordenada X es "+circulo.obtenerX()+
                 "\nLa coordenada Y es "+circulo.obtenerY()+
